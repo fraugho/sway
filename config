@@ -10,6 +10,8 @@ set $menu bemenu-run --line-height 30 --nb '#000000' --nf '#FFFFFF' --sb '#FFFFF
 --hb '#FFFFFF' --hf '#000000' --tf '#FFFFFF' --tb '#000000' --ab '#000000' --fb '#000000' \
 --hp 10 --binding vim
 
+set $lock swaylock -c '000000' --key-hl-color 'ffffff' --ring-color '000000'
+
 ### Output configuration
 output * bg ~/.config/bkgs/black.jpg fill
 output * scale 1.0
@@ -54,6 +56,9 @@ exec swayidle -w \
 
     # Exit sway (logs you out of your Wayland session)
     bindsym $mod+Shift+e exec swaymsg exit
+
+    # Lock Computer 
+    bindsym $mod+Shift+z exec $lock
 
 # Moving around:
     # Move your focus around
